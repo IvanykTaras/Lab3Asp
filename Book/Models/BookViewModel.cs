@@ -9,7 +9,7 @@ namespace Book.Models
         [HiddenInput]
         public int Id { get; set; }
         [Required]
-        [MinLength(10, ErrorMessage = "Zadługie tytół ")]
+        [StringLength(40, ErrorMessage = "Zadługie tytół ")]
         public string Title { get; set; }
         [DataType(DataType.Date)]
         public DateTime? DateOfPublication { get; set; }
