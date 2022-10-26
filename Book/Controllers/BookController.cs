@@ -86,6 +86,7 @@ namespace Book.Controllers
         [HttpPost]
         public IActionResult BookEdit([FromForm] BookViewModel bookViewModel)
         {
+            
             books = books.Select(book => book.Id == bookViewModel.Id ? bookViewModel : book).ToList();
 
             return View("Index", books);

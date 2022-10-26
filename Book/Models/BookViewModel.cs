@@ -16,6 +16,7 @@ namespace Book.Models
 
         public string? Author { get; set; }
         public BookType Types { get; set; }
+
         public double Price { get; set; }
 
 

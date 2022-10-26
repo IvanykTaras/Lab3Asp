@@ -10,13 +10,13 @@
 
 
             
-            <tr>
-                <td>@book.Id</td>
-                <td>@book.Title</td>
-                <td>@book.DateOfPublication</td>
-                <td>@book.Author</td>
-                        <td> <div class="border border-success text-success" style="text-align:center;border-radius: 10px; margin: 5px;">@book.Types</div>    </td>
-                <td>@book.Price</td>
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Title</td>
+            <td>@String.Format("{0:d/M/yyyy}", book.DateOfPublication)</td>
+            <td>@book.Author</td>
+            <td> <div class="border border-success text-success" style="text-align:center;border-radius: 10px; margin: 5px;">@book.Types</div>    </td>
+            <td>@book.Price</td>
 		    <td>
                 <a class="btn btn-primary" asp-controller="Book" asp-action="BookEdit" asp-route-id="@book.Id">Edit</a>
                 <a class="btn btn-danger" asp-controller="Book" asp-action="BookDelete" asp-route-id="@book.Id">Delete</a>
