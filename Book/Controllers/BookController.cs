@@ -61,6 +61,8 @@ namespace Book.Controllers
             BookViewModel book = new BookViewModel();
             if (ModelState.IsValid)
             {
+
+                bookViewModel.Id = booksId++;
                 books.Add(bookViewModel);
                 return View(book);
             }

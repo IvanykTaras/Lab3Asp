@@ -10,6 +10,7 @@
 @{
 }
 <form asp-controller="Book" asp-action="BookEdit" method="post">
+  <input type="number" hidden asp-for="Id" />
   <div class="mb-3">
     <span asp-validation-for="Title" class="text-danger"></span>
     <label class="form-label">Title</label>
