@@ -15,10 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Khrystyna Ivanyk\source\repos\Lab3Asp\Book
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Khrystyna Ivanyk/source/repos/Lab3Asp/Book/Views/Book/BookEdit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Khrystyna Ivanyk/source/repos/Lab3Asp/Book/Views/Book/BookForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

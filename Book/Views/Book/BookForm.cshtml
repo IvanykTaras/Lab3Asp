@@ -1,0 +1,32 @@
+﻿@model BookViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-controller="Book" asp-action="BookForm" method="post">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" asp-for="Title">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Date of publish</label>
+    <input type="date" class="form-control" asp-for="DateOfPublication">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Author</label>
+    <input type="text" class="form-control" asp-for="Author">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Types</label><br />
+    <select asp-for="Types" asp-items="@Html.GetEnumSelectList<BookType>()"></select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Price</label><br />
+    <input type="number" asp-for="Price"/>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary" asp-controller="Book" asp-action="BookForm">Submit</button>
+</form>

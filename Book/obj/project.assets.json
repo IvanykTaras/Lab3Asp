@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "D:\\Users\\Taras.Ivanyk\\.nuget\\packages\\": {}
+    "C:\\Users\\Khrystyna Ivanyk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Taras.Ivanyk\\source\\repos\\Book\\Book\\Book.csproj",
+      "projectUniqueName": "C:\\Users\\Khrystyna Ivanyk\\Source\\Repos\\Lab3Asp\\Book\\Book.csproj",
       "projectName": "Book",
-      "projectPath": "D:\\Users\\Taras.Ivanyk\\source\\repos\\Book\\Book\\Book.csproj",
-      "packagesPath": "D:\\Users\\Taras.Ivanyk\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Taras.Ivanyk\\source\\repos\\Book\\Book\\obj\\",
+      "projectPath": "C:\\Users\\Khrystyna Ivanyk\\Source\\Repos\\Lab3Asp\\Book\\Book.csproj",
+      "packagesPath": "C:\\Users\\Khrystyna Ivanyk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Khrystyna Ivanyk\\Source\\Repos\\Lab3Asp\\Book\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Users\\Taras.Ivanyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Khrystyna Ivanyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

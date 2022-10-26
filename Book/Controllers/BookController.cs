@@ -10,16 +10,13 @@ namespace Book.Controllers
         
         public static int booksId = 0;
         
-        private static List<BookViewModel> _books = new List<BookViewModel>()
+        public static List<BookViewModel> books = new List<BookViewModel>()
         {
             new BookViewModel(){
                 Id = booksId++, 
                 Author = "Canady Trump",
                 DateOfPublication = new DateTime(2002,08,1).Date,
-                PageNumber = 600,
-                Img = urlImg,
                 Price = 6.00,
-                PubHouse = "MyHouse",
                 Title="Green Book",
                 Types = BookType.Anime 
             },
@@ -27,10 +24,7 @@ namespace Book.Controllers
                 Id = booksId++, 
                 Author = "Canady Trump",
                 DateOfPublication = new DateTime(2002,08,1).Date,
-                PageNumber = 600,
-                Img = urlImg,
                 Price = 6.00,
-                PubHouse = "MyHouse",
                 Title="Green Book",
                 Types = BookType.Anime 
             },
@@ -38,18 +32,27 @@ namespace Book.Controllers
                 Id = booksId++,
                 Author = "Canady Trump",
                 DateOfPublication = new DateTime(2002,08,1).Date,
-                PageNumber = 600,
-                Img = urlImg,
                 Price = 6.00,
-                PubHouse = "MyHouse",
                 Title="Green Book",
                 Types = BookType.Anime
             },
         };
+
+
+        //================
+        //Main
+        //================
         public IActionResult Index()
         {
-            return View();
+            
+            return View(books);
         }
+
+
+        //================
+        //Create
+        //================
+
         [HttpGet]
         [HttpPost]
         public IActionResult BookForm(BookViewModel bookViewModel)
@@ -58,21 +61,42 @@ namespace Book.Controllers
             BookViewModel book = new BookViewModel();
             if (ModelState.IsValid)
             {
-                _books.Add(bookViewModel);
+                books.Add(bookViewModel);
                 return View(book);
             }
             else
             {
-
-                return View();
+                return View(book);
             }
 
         }
 
-        [HttpGet]
-        public IActionResult EditForm(int id) {
 
-            return View();
+        //================
+        //Edit
+        //================
+
+        [HttpGet]
+        public IActionResult BookEdit([FromRoute] int id) {
+            BookViewModel book = books[id];
+            return View(book);
+        }
+        [HttpPost]
+        public IActionResult BookEdit([FromForm] BookViewModel bookViewModel)
+        {
+            books = books.Select(book => book.Id == bookViewModel.Id ? bookViewModel : book).ToList();
+
+            return View("Index", books);
+        }
+
+        //================
+        //Delete
+        //================
+        [HttpGet]
+        public IActionResult BookDelete([FromRoute] int id)
+        {
+            books = books.Where(e=>e.Id != id).ToList();
+            return View("Index",books);
         }
         
     }
